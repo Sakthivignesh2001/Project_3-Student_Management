@@ -58,8 +58,6 @@ public class ControllerServlet extends HttpServlet {
 			String marks = request.getParameter("marks");
 			String address = request.getParameter("address");
 
-			System.out.println(firstName + lastName + age + email + marks + address);
-
 			Student student = new Student();
 			student.setFirstName(firstName);
 			student.setLastName(lastName);
@@ -122,7 +120,6 @@ public class ControllerServlet extends HttpServlet {
 		// GetDetailsByIdOperation
 		if (request.getRequestURI().endsWith("getStudentDetailById")) {
 			String id = request.getParameter("studentId");
-			System.out.println(id);
 			Student student = studentService.getStudentDetailsById(Integer.parseInt(id));
 			String path = null;
 			if (student != null) {

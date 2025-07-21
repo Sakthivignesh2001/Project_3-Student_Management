@@ -1,3 +1,5 @@
+<%@ page import="java.util.List"%>
+<%@ page import="com.example.dto.Student"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,8 +23,30 @@
 				<th>Student_Marks</th>
 				<th>Student_Address</th>
 			</tr>
-			<%-- Not completed..! --%>
-			<%--Use JSTL library to retrieve the data --%>
+
+			<%
+			List<Student> students = (List<Student>) request.getAttribute("students");
+			if (students != null) {
+				for (Student student : students) {
+			%>
+			<tr>
+				<th><%=student.getId()%></th>
+				<th><%=student.getFirstName()%></th>
+				<th><%=student.getLastName()%></th>
+				<th><%=student.getAge()%></th>
+				<th><%=student.getEmail()%></th>
+				<th><%=student.getMarks()%></th>
+				<th><%=student.getAddress()%></th>
+			</tr>
+			<%
+			}
+			} else {
+			%>
+			<h2>No Student Details are available</h2>
+			<%
+			}
+			%>
+
 		</table>
 	</main>
 

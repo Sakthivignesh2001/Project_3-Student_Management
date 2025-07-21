@@ -1,5 +1,4 @@
 /* webapp/css/style.css */
-
 body {
 	margin: 0;
 	height: 100vh;
@@ -9,11 +8,31 @@ body {
 	font-family: Arial, sans-serif;
 }
 
-header, footer{
+header, footer {
 	background-color: #003366;
 	color: white;
 	text-align: center;
 	padding: 15px 0;
+	position: relative;
+}
+
+.home-button {
+	position: absolute;
+	top: 35px;
+	left: 20px;
+	padding: 6px 14px;
+	font-size: 14px;
+	background-color: white;
+	color: #003366;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.home-button:hover {
+	background-color: #e6e6e6;
 }
 
 main {

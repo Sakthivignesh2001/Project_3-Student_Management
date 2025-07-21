@@ -8,6 +8,7 @@
 <body>
 	<header>
 		<h2>Welcome to the Student Management Portal</h2>
+		<a href="${pageContext.request.contextPath}/index.jsp" class="home-button">Home</a>
 	</header>
 </body>
 </html>
